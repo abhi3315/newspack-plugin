@@ -73,12 +73,6 @@ class Dashboard extends Wizard {
 				'description' => esc_html__( 'Monetize your content through ads', 'newspack' ),
 			],
 			[
-				'slug'        => 'syndication',
-				'name'        => Wizards::get_name( 'syndication' ),
-				'url'         => Wizards::get_url( 'syndication' ),
-				'description' => esc_html__( 'Distribute your content across multiple websites', 'newspack' ),
-			],
-			[
 				'slug'        => 'analytics',
 				'name'        => Wizards::get_name( 'analytics' ),
 				'url'         => Wizards::get_url( 'analytics' ),
