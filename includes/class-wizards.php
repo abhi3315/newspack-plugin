@@ -36,7 +36,6 @@ class Wizards {
 			'components-demo' => new Components_Demo(),
 			'seo'             => new SEO_Wizard(),
 			'health-check'    => new Health_Check_Wizard(),
-			'engagement'      => new Engagement_Wizard(),
 			'popups'          => new Popups_Wizard(),
 			'connections'     => new Connections_Wizard(),
 			'settings'        => new Settings(),

@@ -37,7 +37,6 @@ class DashboardCard extends Component {
 			analytics: chartBar,
 			seo: search,
 			'health-check': lifesaver,
-			engagement: postComments,
 			popups: megaphone,
 			support: help,
 			connections: plugins,

@@ -23,7 +23,6 @@ import {
 	Wizard,
 	ActionCard,
 } from '../../../../components/src';
-import NewsletterSettings from './newsletter-settings';
 import { STRIPE, READER_REVENUE_WIZARD_SLUG } from '../../constants';
 import './style.scss';
 
@@ -181,21 +180,6 @@ const StripeSetup = () => {
 								onChange={ changeHandler( 'currency' ) }
 							/>
 						</Grid>
-					</SettingsCard>
-					<SettingsCard
-						title={ __( 'Newsletters', 'newspack' ) }
-						description={ __(
-							'Allow donors to sign up to your newsletter when donating.',
-							'newspack'
-						) }
-						columns={ 1 }
-						gutter={ 16 }
-						noBorder
-					>
-						<NewsletterSettings
-							listId={ data.newsletter_list_id }
-							onChange={ changeHandler( 'newsletter_list_id' ) }
-						/>
 					</SettingsCard>
 					<SettingsCard
 						title={ __( 'Fee', 'newspack' ) }

@@ -56,4 +56,4 @@ const NewslettersSettings = ( { listId, onChange } ) => {
 	);
 };
 
-export default NewslettersSettings;
+// export default NewslettersSettings;
