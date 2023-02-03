@@ -13,7 +13,7 @@ import apiFetch from '@wordpress/api-fetch';
 /**
  * Internal dependencies
  */
-import { withWizardScreen, Wizard, ActionCard, hooks } from '../../../../components/src';
+import { withWizardScreen, ActionCard, hooks } from '../../../../components/src';
 import GAMOnboarding from '../../../advertising/components/onboarding';
 import './style.scss';
 
