@@ -84,14 +84,16 @@ export default function AdRefreshControlSettings() {
 	const [ inFlight, setInFlight ] = useState( false );
 	const [ error, setError ] = useState( null );
 	const [ settings, setSettings ] = useState( null );
-	useEffect( async () => {
-		setInFlight( true );
-		try {
-			setSettings( await apiFetch( { path: '/newspack-ads/v1/ad-refresh-control' } ) );
-		} catch ( err ) {
-			setSettings( null );
-		}
-		setInFlight( false );
+	useEffect( () => {
+		( async () => {
+			setInFlight( true );
+			try {
+				setSettings( await apiFetch( { path: '/newspack-ads/v1/ad-refresh-control' } ) );
+			} catch ( err ) {
+				setSettings( null );
+			}
+			setInFlight( false );
+		} )();
 	}, [] );
 	const handleChange = ( key, value ) => {
 		setSettings( {

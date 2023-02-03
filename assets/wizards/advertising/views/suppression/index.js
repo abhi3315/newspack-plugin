@@ -60,8 +60,12 @@ const Suppression = () => {
 				setInFlight( false );
 			} );
 	};
-	useEffect( fetchConfig, [] );
-	useEffect( fetchPostTypes, [] );
+	useEffect( () => {
+		fetchConfig();
+	}, [] );
+	useEffect( () => {
+		fetchPostTypes();
+	}, [] );
 	if ( config === false ) {
 		return <Waiting />;
 	}
