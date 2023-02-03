@@ -14,20 +14,10 @@ import apiFetch from '@wordpress/api-fetch';
  * Internal dependencies
  */
 import { withWizardScreen, Wizard, ActionCard, hooks } from '../../../../components/src';
-import ReaderRevenue from './ReaderRevenue';
 import GAMOnboarding from '../../../advertising/components/onboarding';
 import './style.scss';
 
 const SERVICES_LIST = {
-	'reader-revenue': {
-		label: __( 'Reader Revenue', 'newspack' ),
-		description: __(
-			'Encourage site visitors to contribute to your publishing through donations',
-			'newspack'
-		),
-		Component: ReaderRevenue,
-		configuration: { is_service_enabled: false },
-	},
 	'google-ad-manager': {
 		label: __( 'Google Ad Manager', 'newspack' ),
 		description: __(
@@ -43,7 +33,6 @@ const Services = ( { renderPrimaryButton } ) => {
 	const [ services, updateServices ] = hooks.useObjectState( SERVICES_LIST );
 	const [ isLoading, setIsLoading ] = useState( true );
 	const slugs = keys( services );
-	const readerRevenueWizardData = Wizard.useWizardData( 'reader-revenue' );
 
 	useEffect( () => {
 		apiFetch( {
@@ -56,11 +45,7 @@ const Services = ( { renderPrimaryButton } ) => {
 
 	const saveSettings = async () => {
 		const data = mapValues( services, property( 'configuration' ) );
-		// Add Reader Revenue Wizard data straight from the Wizard.
-		data[ 'reader-revenue' ] = {
-			...data[ 'reader-revenue' ],
-			...readerRevenueWizardData,
-		};
+
 		return apiFetch( {
 			path: '/newspack/v1/wizard/newspack-setup-wizard/services',
 			method: 'POST',

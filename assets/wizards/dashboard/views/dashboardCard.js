@@ -6,18 +6,7 @@
  * WordPress dependencies.
  */
 import { Component } from '@wordpress/element';
-import {
-	chartBar,
-	help,
-	lifesaver,
-	megaphone,
-	payment,
-	postComments,
-	plugins,
-	search,
-	stretchWide,
-	typography,
-} from '@wordpress/icons';
+import { chartBar, plugins, search, stretchWide, typography } from '@wordpress/icons';
 
 /**
  * Internal dependencies.
@@ -32,14 +21,9 @@ class DashboardCard extends Component {
 		const { name, description, slug, url } = this.props;
 		const iconMap = {
 			'site-design': typography,
-			'reader-revenue': payment,
 			advertising: stretchWide,
 			analytics: chartBar,
 			seo: search,
-			'health-check': lifesaver,
-			popups: megaphone,
-			support: help,
-			connections: plugins,
 		};
 		return (
 			<ButtonCard

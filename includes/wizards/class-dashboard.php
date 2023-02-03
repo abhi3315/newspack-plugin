@@ -61,12 +61,6 @@ class Dashboard extends Wizard {
 				'description' => esc_html__( 'Customize the look and feel of your site', 'newspack' ),
 			],
 			[
-				'slug'        => 'reader-revenue',
-				'name'        => Wizards::get_name( 'reader-revenue' ),
-				'url'         => Wizards::get_url( 'reader-revenue' ),
-				'description' => esc_html__( 'Generate revenue from your customers', 'newspack' ),
-			],
-			[
 				'slug'        => 'advertising',
 				'name'        => Wizards::get_name( 'advertising' ),
 				'url'         => Wizards::get_url( 'advertising' ),
@@ -83,30 +77,6 @@ class Dashboard extends Wizard {
 				'name'        => Wizards::get_name( 'seo' ),
 				'url'         => Wizards::get_url( 'seo' ),
 				'description' => esc_html__( 'Configure basic SEO settings', 'newspack' ),
-			],
-			[
-				'slug'        => 'health-check',
-				'name'        => Wizards::get_name( 'health-check' ),
-				'url'         => Wizards::get_url( 'health-check' ),
-				'description' => esc_html__( 'Verify and correct site health issues', 'newspack' ),
-			],
-			[
-				'slug'        => 'engagement',
-				'name'        => Wizards::get_name( 'engagement' ),
-				'url'         => Wizards::get_url( 'engagement' ),
-				'description' => esc_html__( 'Newsletters, commenting, social, recirculation', 'newspack' ),
-			],
-			[
-				'slug'        => 'popups',
-				'name'        => Wizards::get_name( 'popups' ),
-				'url'         => Wizards::get_url( 'popups' ),
-				'description' => esc_html__( 'Reach your readers with configurable campaigns', 'newspack' ),
-			],
-			[
-				'slug'        => 'connections',
-				'name'        => Wizards::get_name( 'connections' ),
-				'url'         => Wizards::get_url( 'connections' ),
-				'description' => esc_html__( 'Connections to third-party services', 'newspack' ),
 			],
 		];
 

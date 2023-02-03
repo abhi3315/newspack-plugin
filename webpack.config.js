@@ -67,7 +67,6 @@ const webpackConfig = getBaseWebpackConfig(
 				'reader-registration',
 				'view.js'
 			),
-			'my-account': path.join( __dirname, 'includes', 'reader-revenue', 'my-account', 'index.js' ),
 			admin: path.join( __dirname, 'assets', 'admin', 'index.js' ),
 		},
 	}

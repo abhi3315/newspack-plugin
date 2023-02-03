@@ -547,18 +547,6 @@ class Setup_Wizard extends Wizard {
 			$newsletters_configuration_manager = Configuration_Managers::configuration_manager_class_for_plugin_slug( 'newspack-newsletters' );
 			$newsletters_configuration_manager->update_settings( $request['newsletters'] );
 		}
-		if ( true === $request['reader-revenue']['is_service_enabled'] ) {
-			Plugin_Manager::activate( 'woocommerce' );
-			$rr_wizard = new Reader_Revenue_Wizard();
-			if ( isset( $request['reader-revenue']['donation_data'] ) ) {
-				$rr_wizard->update_donation_settings( $request['reader-revenue']['donation_data'] );
-			}
-			if ( isset( $request['reader-revenue']['stripe_data'] ) ) {
-				$stripe_settings            = $request['reader-revenue']['stripe_data'];
-				$stripe_settings['enabled'] = true;
-				$rr_wizard->update_stripe_settings( $stripe_settings );
-			}
-		}
 		if ( true === $request['google-ad-manager']['is_service_enabled'] ) {
 			$service = 'google_ad_manager';
 			update_option( Advertising_Wizard::NEWSPACK_ADVERTISING_SERVICE_PREFIX . $service, true );

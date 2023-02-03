@@ -93,12 +93,6 @@ final class Newspack {
 		include_once NEWSPACK_ABSPATH . 'includes/reader-activation/class-reader-activation.php';
 		include_once NEWSPACK_ABSPATH . 'includes/class-recaptcha.php';
 		include_once NEWSPACK_ABSPATH . 'includes/class-magic-link.php';
-		include_once NEWSPACK_ABSPATH . 'includes/reader-revenue/stripe/class-stripe-connection.php';
-		include_once NEWSPACK_ABSPATH . 'includes/reader-revenue/stripe/class-stripe-webhooks.php';
-		include_once NEWSPACK_ABSPATH . 'includes/reader-revenue/class-woocommerce-connection.php';
-		include_once NEWSPACK_ABSPATH . 'includes/reader-revenue/stripe/class-stripe-sync.php';
-		include_once NEWSPACK_ABSPATH . 'includes/reader-revenue/my-account/class-woocommerce-my-account.php';
-		include_once NEWSPACK_ABSPATH . 'includes/reader-revenue/class-reader-revenue-emails.php';
 		include_once NEWSPACK_ABSPATH . 'includes/oauth/class-oauth.php';
 		include_once NEWSPACK_ABSPATH . 'includes/oauth/class-google-oauth.php';
 		include_once NEWSPACK_ABSPATH . 'includes/oauth/class-google-services-connection.php';
@@ -126,12 +120,8 @@ final class Newspack {
 		include_once NEWSPACK_ABSPATH . 'includes/wizards/class-settings.php';
 		include_once NEWSPACK_ABSPATH . 'includes/wizards/class-advertising-wizard.php';
 		include_once NEWSPACK_ABSPATH . 'includes/wizards/class-analytics-wizard.php';
-		include_once NEWSPACK_ABSPATH . 'includes/wizards/class-reader-revenue-wizard.php';
 		include_once NEWSPACK_ABSPATH . 'includes/wizards/class-seo-wizard.php';
 		include_once NEWSPACK_ABSPATH . 'includes/wizards/class-site-design-wizard.php';
-		include_once NEWSPACK_ABSPATH . 'includes/wizards/class-health-check-wizard.php';
-		include_once NEWSPACK_ABSPATH . 'includes/wizards/class-popups-wizard.php';
-		include_once NEWSPACK_ABSPATH . 'includes/wizards/class-connections-wizard.php';
 
 		include_once NEWSPACK_ABSPATH . 'includes/class-wizards.php';
 
